@@ -1,0 +1,30 @@
+{% extends 'template.html' %} 
+
+{% block content %}
+
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="{{ url_for('static', filename='img/logo.webp') }}" alt="" width="72" height="57">
+  <h1 class="display-5 fw-bold text-body-emphasis">MindCheck</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Faça o upload da imagem de MRI para fazer a ánalise.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      
+      <form 
+        class="form" 
+        action="/analise"
+        enctype="multipart/form-data"
+        method="post"
+      >
+        <div>
+          <input class="form-control form-control-lg" id="formFileLg" type="file" name="file">
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-lg px-4 gap-3 mt-5">Enviar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+
+

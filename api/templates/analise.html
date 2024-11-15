@@ -1,0 +1,33 @@
+{% extends 'template.html' %} {% block content %}
+
+<div class="px-4 py-5 my-5 text-center">
+  <img
+    class="d-block mx-auto mb-4"
+    src="{{ url_for('static', filename='img/logo.webp') }}"
+    alt=""
+    width="72"
+    height="57"
+  />
+  <h1 class="display-5 fw-bold text-body-emphasis">MindCheck</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Resultado da ánalise</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      {% if prediction[0] < prediction[1] %}
+      <p class="fs-5 col-12">
+        O modelo prevê que o paciente não tem Alzheimer.
+      </p>
+      {% else %}
+      <p class="fs-5 col-12">O modelo prevê que o paciente tem Alzheimer.</p>
+      {% endif %}
+    </div>
+
+    <img
+      src="{{ url_for('static', filename='upload/' + file_path) }}"
+      class="mt-5 rounded mx-auto d-block"
+      width="176"
+      height="208"
+    />
+  </div>
+</div>
+
+{% endblock %}
