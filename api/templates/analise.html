@@ -14,10 +14,10 @@
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       {% if prediction[0] < prediction[1] %}
       <p class="fs-5 col-12">
-        O modelo prevê que o paciente não tem Alzheimer.
+        O modelo prevê que o paciente tem {{ prediction[1] * 100 }}% de chance de não ter Alzheimer.
       </p>
       {% else %}
-      <p class="fs-5 col-12">O modelo prevê que o paciente tem Alzheimer.</p>
+      <p class="fs-5 col-12">O modelo prevê que o paciente tem {{ prediction[0] * 100 }}% de chance de ter Alzheimer.</p>
       {% endif %}
     </div>
 
