@@ -1,0 +1,10 @@
+services:
+  server:
+    build:
+      context: .
+    ports:
+      - 8085:8085
+    volumes:
+      - .:/app
+
+

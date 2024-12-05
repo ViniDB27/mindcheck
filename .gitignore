@@ -2,3 +2,4 @@
 .vercel
 /api/static/upload/*
 /venv
+**/.DS_Store

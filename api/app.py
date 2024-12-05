@@ -59,4 +59,4 @@ def contact():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port=8085, host='0.0.0.0', debug=True, threaded=True)
