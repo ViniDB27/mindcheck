@@ -48,4 +48,4 @@ COPY . .
 EXPOSE 8085
 
 # Run the application.
-CMD python api/app.py
+CMD ["python", "api/app.py"]
